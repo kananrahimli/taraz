@@ -23,7 +23,7 @@ select {
   appearance: none;
   background: url("../../assets/svg/down.svg");
   background-repeat: no-repeat;
-  background-position: right 2px bottom 12px;
+  background-position: right 2px bottom 18px;
   background-size: 12px;
   color: #969799;
   position: relative;

@@ -8,6 +8,10 @@ import Cargo from '../components/Cargo.vue'
 import Taxi from '../components/Taxi.vue'
 import Plane from '../components/Plane.vue'
 import Hotel from '../components/Hotel.vue'
+import CargoTurkey from '../components/CargoTurkey.vue'
+import CargoAmerica from '../components/CargoAmerica.vue'
+import CargoChina from '../components/CargoChina.vue'
+import CargoGermany from '../components/CargoGermany.vue'
 const routes = [
   {
     path:'',redirect:'/login'
@@ -19,7 +23,14 @@ const routes = [
     path:'/signup',component:Signup
   },
   {
-    path:'/:id',component:CompanyDetails,props:true
+    path:'/:id',component:CompanyDetails,props:true,children:[
+      {path:'',redirect:{name:'turkey'}},
+      {path:'turkey',component:CargoTurkey,name:'turkey'},
+      {path:'china',component:CargoChina},
+      {path:'america',component:CargoAmerica},
+      {path:'germany',component:CargoGermany},
+
+    ]
   },
   {
     path:'/main',component:Main,

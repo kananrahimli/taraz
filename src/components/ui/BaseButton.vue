@@ -9,8 +9,16 @@
     {{ name }}</router-link
   >
   <button
-    v-if="!link"
+    v-if="!link && !enter"
     :class="{ normal: isDisabled, disabled: !isDisabled, second: second }"
+    :disabled="!isDisabled"
+  >
+    {{ name }}
+  </button>
+
+  <button
+    v-if="enter"
+    :class="{ normalLink: isDisabled, disabledLink: !isDisabled }"
     :disabled="!isDisabled"
   >
     {{ name }}
@@ -52,7 +60,7 @@ export default {
 </script>
 
 <style scoped>
-.disabled {
+/* .disabled {
   background: #959597;
   color: #ffff;
   border: 1px solid;
@@ -61,7 +69,7 @@ export default {
   font-weight: 600;
   text-align: center;
   text-decoration: none;
-}
+} */
 .disabledLink {
   background: #959597;
   color: #ffff;

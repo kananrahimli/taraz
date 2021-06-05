@@ -80,7 +80,8 @@ export default {
 .isNormal{
     border: transparent;
     border-bottom: 1.5px solid  #969799;
-    margin: 8px 0px!important;
+    margin: 10px 0px!important;
+    padding-bottom: 2px;
 }
 input:focus{
     border: transparent;

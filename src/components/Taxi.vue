@@ -52,7 +52,7 @@ export default {
   }
  
  #taxi{
-   margin-bottom: 180px;
+   margin-bottom: 240px;
  }
   
 </style>

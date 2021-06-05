@@ -1,7 +1,7 @@
 <template>
   <div
     id="signup"
-    class="d-flex  justify-content-center align-items-center flex-column"
+    class="d-flex  justify-content-center align-items-center flex-column py-3 mb-3"
   >
     <div class="d-flex flex-column">
       <h1 class="font-weight-bold mb-0">Hesab yarat</h1>
@@ -23,7 +23,7 @@
         class="mt-3 mb-2"
         name="Daxil ol"
         :isDisabled="disable"
-        link to="/main/cargo"
+        enter
       ></base-button>
     </div>
     <p class="mt-4">Bu hesablarinizla davam edin</p>
@@ -47,7 +47,7 @@ export default {
       this.disable = val;
     },
     signUp(){
-        this.$store.dispatch('hideLogo')
+        this.$router.push('/main/cargo')
     }
   },
    created() {
@@ -81,7 +81,5 @@ a {
   color: #2f2f30;
 }
 
-#signup {
-  padding: 8px 0px;
-}
+
 </style>

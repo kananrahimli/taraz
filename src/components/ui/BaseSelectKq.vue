@@ -1,28 +1,53 @@
 <template>
   <div class="mx-4">
-    <span>{{ text }}</span>
-    <select name="" id="" @change="select" ref="select">
-      <slot></slot>
+    <input
+      type="text"
+      :placeholder="text"
+      v-model="inputVal"
+      @input="writeWeight"
+    />
+    <select @change="select" ref="select">
+      <option  selected disabled hidden> kq</option>
+      <option v-for="measure in measures" :key="measure">{{result}} {{ measure }}</option>
     </select>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["value", "text"],
-  methods:{
+  props: [ "text"],
+  emits: ["hesabla"],
+  methods: {
+    writeWeight() {
+      this.deyer=this.inputVal
+      this.result=''
+    },
     select(){
-      this.$refs.select.style.paddingLeft="2px";
+      this.result= this.deyer
+      this.inputVal=''
+      this.$refs.select.style.width='80px'
+      this.$refs.select.style.paddingLeft='20px'
+      console.log(this.$refs.select.style);
     }
-  }
+  },
+  data() {
+    return {
+      inputVal: null,
+      measures: ['kq','ton','qr'],
+      selectedMesaure:null,
+      deyer:null,
+      result:null
+    };
+  },
 };
 </script>
 
 <style scoped>
-div{
+div {
   border: none;
   border-bottom: 1px solid #969799;
   padding: 4px 0px;
+  position: relative;
 }
 select {
   width: 48px;
@@ -39,30 +64,23 @@ select {
   position: relative;
   cursor: pointer;
 }
-span {
+
+input {
   color: #969799;
+  border: none;
+  width: 100px;
   position: relative;
-  margin-right: 96px;
+  outline: none;
 }
 
-/* span::after{
-    content: '';
-    position: absolute;
-    width: 500%;
-    height: 1px;
-    background: #969799;
-    left: 0;
-    top: 29px;
-    z-index: 100;
-} */
-span::before{
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 30px;
-    background: #969799;
-    right: -250%;
-    top: 0px;
-    z-index: 100;
+div::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 30px;
+  background: #969799;
+  right: 40%;
+  top: 10px;
+  z-index: 100;
 }
 </style>

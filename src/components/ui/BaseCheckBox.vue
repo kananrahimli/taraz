@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="checkbox" :name="name" :id="name" v-model="value" @change="accept"/>
+    <input type="checkbox" :name="name" :id="name" v-model="value" @change="accept" :class="{appearance:!appearance}"/>
     <label :for="name" :class="{isWeight:!isWeight,isSlim:isWeight}">{{text}}</label>
   </div>
 </template>
@@ -18,6 +18,11 @@ export default {
         requried:true
       },
       isWeight:{
+        type:Boolean,
+        requried:false,
+        default:false
+      },
+      appearance:{
         type:Boolean,
         requried:false,
         default:false
@@ -62,7 +67,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-input[type="checkbox"]::after {
+.appearance::after {
   content: "";
   position: absolute;
   height: 8px;
@@ -72,7 +77,7 @@ input[type="checkbox"]::after {
   top: 1px;
   display: none;
 }
-input[type="checkbox"]:checked::after {
+.appearance:checked::after {
   display: block;
 }
 </style>

@@ -1,47 +1,44 @@
 <template>
-    <div id="main" class="d-flex flex-column align-items-center container">
-      <div class="logo mt-4" v-if="!isShown">
-        <h2>Taraz</h2>
-      </div>
-      <ul class="list-unstyled d-flex mt-3  w-100">
-        <li class="mr-5">
-          <router-link to="/main/cargo" @click="change">Karqo</router-link>
-        </li>
-        <li class="mx-5">
-          <router-link to="/main/taxi" @click="change">Taksi</router-link>
-        </li>
-        <li class="mx-5">
-          <router-link to="/main/plane" @click="change">Uçuş</router-link>
-        </li>
-        <li class="ml-5">
-          <router-link to="/main/hotel" @click="change">Otel</router-link>
-        </li>
-      </ul>
-      <div class="py-5 container">
-        <router-view></router-view>
-      </div>
+  <div id="main" class="d-flex flex-column align-items-center container">
+    <div class="logo mt-4" v-if="!isShown">
+      <h2>Taraz</h2>
     </div>
+    <ul class="list-unstyled d-flex mt-3  w-100">
+      <li class="mr-5">
+        <router-link to="/main/cargo" @click="change">Karqo</router-link>
+      </li>
+      <li class="mx-5">
+        <router-link to="/main/taxi" @click="change">Taksi</router-link>
+      </li>
+      <li class="mx-5">
+        <router-link to="/main/plane" @click="change">Uçuş</router-link>
+      </li>
+      <li class="ml-5">
+        <router-link to="/main/hotel" @click="change">Otel</router-link>
+      </li>
+    </ul>
+    <div class="py-5 container">
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
 <script>
-
 export default {
-    data(){
-        return{
-            
-        }
+  data() {
+    return {};
+  },
+  computed: {
+    isShown() {
+      return this.$store.getters.isShown;
     },
-    computed:{
-      isShown(){
-        return this.$store.getters.isShown
-      }
+  },
+  methods: {
+    change() {
+      this.$store.state.isShown = false;
     },
-    methods:{
-      change(){
-        this.$store.state.isShown=false
-      }
-    },
-    created() {
+  },
+  created() {
     if (
       this.$router.currentRoute._value.path != "/login" ||
       this.$router.currentRoute._value.path != "/signup" ||
@@ -49,8 +46,15 @@ export default {
     ) {
       this.$store.state.isShown = false;
     }
+    console.log(this.$router.currentRoute._value.path);
+    if (this.$router.currentRoute._value.path == "/main/cargo") {
+      this.$store.state.maye = false;
+      this.$store.state.paket = false;
+      this.$store.state.xususi = false;
+      this.$store.state.sekil = false;
+      this.$store.state.tecili = false;
+    }
   },
-    
 };
 </script>
 
@@ -98,7 +102,7 @@ ul::after {
   background-color: #969799;
 }
 ul li a {
-  color: rgba(47, 47, 48, 0.6);
+  color: #6c6d6d;
   font-size: 20px;
   font-weight: 500;
 }

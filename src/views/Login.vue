@@ -1,5 +1,5 @@
 <template>
-  <div id="login" class="d-flex  justify-content-center align-items-center flex-column mb-4">
+  <div id="login" class="d-flex  justify-content-center align-items-center flex-column mb-4 py-5">
     <div class="d-flex flex-column">
       <h1 class="font-weight-bold mb-0" >Hesaba daxil ol</h1>
       <span class="mx-auto font-weight-bolder">Və Ya<router-link to="/signup" class="text-decoration-none ml-1">Qeydiyyatdan keç</router-link></span>
@@ -27,7 +27,7 @@
 export default {
   methods:{
     login(){
-      this.$store.dispatch('hideLogo')
+
     }
   },
    created() {

@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column mb-5">
+  <div class="d-flex flex-column  " id="cargo">
     <div class="d-flex container flex-wrap">
       <base-select>
         <option selected>Sifariş ediləcək ölkə</option>
@@ -13,13 +13,9 @@
           country
         }}</option>
       </base-select>
-      <base-select-kq text="Çəki">
-        <option selected disabled hidden>kq</option>
-        <option v-for="measure in measures" :key="measure"
-          >{{ measure }} kq</option
-        >
+      <base-select-kq text="Çəki"  >
       </base-select-kq>
-      <base-button name="Hesabla"></base-button>
+      <base-button name="Hesabla" @click="hesabla"></base-button>
     </div>
 
     <div class="d-flex container py-5 px-5">
@@ -48,7 +44,7 @@
       
     </div>
 
-    <div class="base" v-if="maye||paket||tecili||xususi||sekil">
+    <div class="base" v-if="clicked">
       <table class="table table-borderless">
         <thead>
           <tr class="bg-secondary font-weight- text-center">
@@ -59,7 +55,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(cargocompany,index) in filterCompanies" :key="cargocompany" class="text-center ">
+          <tr v-for="(cargocompany,index) in filteredCompanies" :key="cargocompany" class="text-center ">
             <td  v-if="index<a"  class="w-25"><img :src="require('../assets/'+cargocompany.logo+'.png')" alt="" > <a href="" class="ml-2">    {{cargocompany.site}}</a> </td>
             <td  v-if="index<a">{{cargocompany.moneyValue}}</td>
             <td  v-if="index<a">{{cargocompany.star}}</td>
@@ -68,7 +64,7 @@
         </tbody>
         
       </table>
-      <button @click="a=2?a=filterCompanies.length:a=2" v-if="a!==filterCompanies.length">Ardina bax</button>
+      <button @click="a=2?a=filteredCompanies.length:a=2" v-if="a!==filteredCompanies.length">Ardina bax</button>
     </div>
   </div>
 </template>
@@ -79,66 +75,92 @@ export default {
     return {
       fromCountries: ["Aze", "Turk", "georgo"],
       toCountries: ["Aze", "Turk", "georgo"],
-      measures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      clicked:false,
+      filteredCompanies:null,
       maye:false,
       paket:false,
       xususi:false,
       sekil:false,
       tecili:false,
-      a:2
+      a:2,
+
+     
+
     };
   },
   computed:{
     cargoCompanies(){
       return this.$store.getters.cargoCompanies
     },
-    filterCompanies(){
-      return this.cargoCompanies.filter((company)=>{
-        if(this.maye && company.type.includes('maye')){
-          this.$store.state.isShown=true
-          return true;
-        }
-        if(this.paket && company.type.includes('paket')){
-          this.$store.state.isShown=true
-          return true;
-        }
-        if(this.xususi && company.type.includes('xüsusi')){
-          this.$store.state.isShown=true
-          return true;
-        }
-        if(this.sekil && company.type.includes('şəkil')){
-          this.$store.state.isShown=true
-          return true;
-        }
-        if(this.tecili && company.type.includes('təcili')){
-          this.$store.state.isShown=true
-          return true;
-        }
-      })
-    }
+    
   },
   methods:{
     setMaye(){
       this.$store.dispatch('setMaye',this.maye)
+      this.clicked=false
+      this.$store.state.isShown=false
     },
     setPaket(){
       this.$store.dispatch('setPaket',this.paket)
+      this.clicked=false
+       this.$store.state.isShown=false
     },
     setXususi(){
       this.$store.dispatch('setXususi',this.xususi)
+      this.clicked=false
+       this.$store.state.isShown=false
     },
     setSekil(){
       this.$store.dispatch('setSekil',this.sekil)
-      console.log(this.$store.state.sekil);
+      this.clicked=false
+       this.$store.state.isShown=false
     },
     setTecili(){
       this.$store.dispatch('setTecili',this.tecili)
-    }
+      this.clicked=false
+       this.$store.state.isShown=false
+    },
+
+    hesabla(){
+       this.filteredCompanies=this.cargoCompanies.filter((company)=>{
+        if(this.maye && company.type.includes('maye')){
+          this.clicked=true
+          this.$store.state.isShown=true
+          return true;
+        }
+        if(this.paket && company.type.includes('paket')){
+          this.clicked=true
+          this.$store.state.isShown=true
+          return true;
+        }
+        if(this.xususi && company.type.includes('xüsusi')){
+          this.clicked=true
+          this.$store.state.isShown=true
+          return true;
+        }
+        if(this.sekil && company.type.includes('şəkil')){
+          this.clicked=true
+          this.$store.state.isShown=true
+          return true;
+        }
+        if(this.tecili && company.type.includes('təcili')){
+          this.clicked=true
+          this.$store.state.isShown=true
+          return true;
+        }
+      })
+      console.log(this.filteredCompanies);
+    },
+   
+   
   }
 };
 </script>
 
 <style scoped>
+  #cargo{
+    margin-bottom: 120px;
+  }
   .bg-secondary{
     background: #f8f8f8 !important;
   }
