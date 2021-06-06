@@ -110,8 +110,8 @@ i{
 
 .fa-eye,.fa-eye-slash{
      position: absolute;
-    right: 4px;
-    bottom: 16px;
+    right: 8px;
+    bottom: 20px;
     cursor: pointer;
       color: #969799;
       font-size: 12px;
