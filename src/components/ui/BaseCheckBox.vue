@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="checkbox" :name="name" :id="name" v-model="value" @change="accept" :class="{appearance:!appearance}"/>
+    <input type="checkbox" :name="name" :id="name" v-model="value" @change="accept" :class="{appearance:!appearanceNone}"/>
     <label :for="name" :class="{isWeight:!isWeight,isSlim:isWeight}">{{text}}</label>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
         requried:false,
         default:false
       },
-      appearance:{
+      appearanceNone:{
         type:Boolean,
         requried:false,
         default:false

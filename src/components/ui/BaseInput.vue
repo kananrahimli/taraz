@@ -81,7 +81,8 @@ export default {
     border: transparent;
     border-bottom: 1.5px solid  #969799;
     margin: 10px 0px!important;
-    padding-bottom: 2px;
+    padding-top: 0px;
+    padding-bottom: 10px;
 }
 input:focus{
     border: transparent;
@@ -100,7 +101,7 @@ div{
 i{
     position: absolute;
     right: 0px;
-    bottom: 20px;
+    bottom: 30px;
     cursor: pointer;
       color: #969799;
       font-size: 12px;

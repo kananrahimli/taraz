@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Login from '../views/Login'
 import Signup from '../views/Signup.vue'
+import About from '../views/About.vue'
+import Contact from '../views/Contact.vue'
+import Privacy from '../views/Privacy.vue'
 import Main from '../views/Main.vue'
 import CompanyDetails from '../views/CompanyDetails.vue'
 import Cargo from '../components/Cargo.vue'
@@ -21,6 +24,15 @@ const routes = [
   },
   {
     path:'/signup',component:Signup
+  },
+  {
+    path:'/about',component:About
+  },
+  {
+    path:'/contact',component:Contact
+  },
+  {
+    path:'/privacy',component:Privacy
   },
   {
     path:'/:id',component:CompanyDetails,props:true,children:[

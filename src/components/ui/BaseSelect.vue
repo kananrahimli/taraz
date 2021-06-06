@@ -1,14 +1,36 @@
 <template>
-      <select name="" id=""  class="mx-4">
+<div class="position-relative">
+   <select name="" id=""  class="mx-4" @click="change" @input="select" >
     <slot></slot>
   </select>
+  <i class="fas fa-caret-down" ref="direction"></i>
+</div>
+ 
 
 
 </template>
 
 <script>
 export default {
-   props:['value']
+   props:['value'],
+   data(){
+     return{
+       up:false
+     }
+   },
+   methods:{
+     change(){
+       this.up=!this.up
+       if(this.up){
+         this.$refs.direction.style.transform='rotate(180deg)'
+       }else{
+         this.$refs.direction.style.transform='rotate(-360deg)'
+       }
+     },
+     select(){
+      this.up=true
+     }
+   }
 };
 </script>
 
@@ -16,17 +38,23 @@ export default {
 select {
   padding-right: 100px;
   border: none;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 8px;
+  padding-bottom: 12px;
   border-bottom: 1px solid;
   outline: none;
   appearance: none;
-  background: url("../../assets/svg/down.svg");
-  background-repeat: no-repeat;
-  background-position: right 2px bottom 18px;
-  background-size: 12px;
   color: #969799;
   position: relative;
   cursor: pointer;
+}
+div{
+  position: relative;
+}
+i{
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  color: #969799;
+  transition: 0.1s;
 }
 </style>

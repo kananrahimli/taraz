@@ -19,6 +19,16 @@ export default createStore({
       xususi:null,
       sekil:null,
       tecili:null,
+
+      taxies:[
+        {id:1,logo:'logo',phone:'*189',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'logo',phone:'*9000',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'logo',phone:'*9111',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'logo',phone:'*2020',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'logo',phone:'189',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'logo',phone:'189',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'logo',phone:'189',moneyValue:'2 azn',star:'3.5'},
+      ]
     };
   },
   mutations: {
@@ -67,6 +77,9 @@ export default createStore({
     },
   cargoCompanies(state){
       return state.cargoCompanies
+    },
+    taxies(state){
+      return state.taxies
     }
   },
 });
