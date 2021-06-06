@@ -76,6 +76,7 @@ export default {
     border: transparent;
     border-bottom: 1.5px solid  #2F2F30;
     margin: 12px 0px;
+    padding: 4px 8px;
 }
 .isNormal{
     border: transparent;
@@ -102,6 +103,15 @@ i{
     position: absolute;
     right: 0px;
     bottom: 30px;
+    cursor: pointer;
+      color: #969799;
+      font-size: 12px;
+}
+
+.fa-eye,.fa-eye-slash{
+     position: absolute;
+    right: 4px;
+    bottom: 16px;
     cursor: pointer;
       color: #969799;
       font-size: 12px;

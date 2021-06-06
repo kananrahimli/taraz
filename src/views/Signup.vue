@@ -1,7 +1,7 @@
 <template>
   <div
     id="signup"
-    class="d-flex  justify-content-center align-items-center flex-column py-3 mb-3"
+    class="d-flex  justify-content-center align-items-center flex-column py-2 mb-3"
   >
     <div class="d-flex flex-column">
       <h1 class="font-weight-bold mb-0">Hesab yarat</h1>
