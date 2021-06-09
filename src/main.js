@@ -8,6 +8,7 @@ import BaseCheckBox from './components/ui/BaseCheckBox.vue'
 import BaseSelect from './components/ui/BaseSelect.vue'
 import BaseSelectMark from './components/ui/BaseSelectMark.vue'
 import BaseTitle from './components/ui/BaseTitle.vue'
+import BaseCard from './components/ui/BaseCard.vue'
 const app=createApp(App)
 
 app.component('base-input',BaseInput)
@@ -16,4 +17,5 @@ app.component('base-check-box',BaseCheckBox)
 app.component('base-select',BaseSelect)
 app.component('base-select-mark',BaseSelectMark)
 app.component('base-title',BaseTitle)
+app.component('base-card',BaseCard)
 app.use(store).use(router).mount('#app');

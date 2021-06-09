@@ -6,12 +6,12 @@ export default createStore({
       isShown: true,
 
       cargoCompanies:[
-        {id:1,logo:'logo',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5',type:['maye','paket','xüsusi','şəkil','təcili']},
-        {id:2,logo:'logo',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5',type:['maye','xüsusi','şəkil']},
-        {id:3,logo:'logo',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5',type:['paket','xüsusi']},
-        {id:4,logo:'logo',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5', type:['xüsusi','maye','şəkil']},
-        {id:5,logo:'logo',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5', type:['təcili','maye','şəkil']},
-        {id:6,logo:'logo',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5', type:['şəkil']}
+        {id:1,logo:'starex',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5',type:['maye','paket','xüsusi','şəkil','təcili']},
+        {id:2,logo:'mover',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5',type:['maye','xüsusi','şəkil']},
+        {id:3,logo:'camex',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5',type:['paket','xüsusi']},
+        {id:4,logo:'bringly',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5', type:['xüsusi','maye','şəkil']},
+        {id:5,logo:'starex',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5', type:['təcili','maye','şəkil']},
+        {id:6,logo:'mover',name:'Starex',site:'starex.az',moneyValue:'$6',star:'3.5', type:['şəkil']}
       ],
 
       maye:null,
@@ -21,13 +21,13 @@ export default createStore({
       tecili:null,
 
       taxies:[
-        {id:1,logo:'logo',phone:'*189',moneyValue:'2 azn',star:'3.5'},
-        {id:1,logo:'logo',phone:'*9000',moneyValue:'2 azn',star:'3.5'},
-        {id:1,logo:'logo',phone:'*9111',moneyValue:'2 azn',star:'3.5'},
-        {id:1,logo:'logo',phone:'*2020',moneyValue:'2 azn',star:'3.5'},
-        {id:1,logo:'logo',phone:'189',moneyValue:'2 azn',star:'3.5'},
-        {id:1,logo:'logo',phone:'189',moneyValue:'2 azn',star:'3.5'},
-        {id:1,logo:'logo',phone:'189',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'189taxi',phone:'*189',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'bakutaxi',phone:'*9000',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'ekonom',phone:'*9111',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'uber',phone:'?',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'bakutaxi',phone:'*9000',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'189taxi',phone:'*189',moneyValue:'2 azn',star:'3.5'},
+        {id:1,logo:'ekonom',phone:'*9111',moneyValue:'2 azn',star:'3.5'},
       ]
     };
   },

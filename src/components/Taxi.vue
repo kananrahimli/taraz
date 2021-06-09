@@ -1,6 +1,7 @@
 <template>
-   <div id="taxi" class="d-flex flex-column " ref="taxi">
-    <div class="d-flex justify-content-around flex-wrap">
+   <div id="taxi" ref="taxi">
+     <base-card  class="d-flex flex-column mb-5 ">
+      <div class="d-flex justify-content-around flex-wrap">
       <base-input type="text" placeholder="Hardan" large class="mr-4" ></base-input>
        <base-input type="text" placeholder="Haraya" large class="mx-4" plus @addLocation="addNewLocation"></base-input>
         <base-select class="base mx-4">
@@ -10,11 +11,13 @@
       <base-button class="base" name="Hesabla" @click="hesabla"> </base-button>
     </div>
 
-    <div class="base d-flex flex-wrap justify-contet-start w-100 px-4">
+    <div class="base d-flex flex-wrap justify-contet-start w-100 pl-2">
       <base-input type="text" v-for="a in time" :key="a" placeholder="Ünvan əlavə et" large  defaultPlus class="addLocation  my-2"></base-input>
     </div>
+     </base-card>
+   
     
-    <div  v-if="clicked">
+    <div  v-if="clicked" >
       <table class="table table-borderless mt-4">
         <thead>
           <tr class="bg-secondary font-weight- text-center">
@@ -96,7 +99,8 @@ export default {
   }
 
     img{
-      width: 10%;
+      width: 30%;
+      color: black;
     }
 
   .addLocation:nth-child(even){
@@ -105,7 +109,7 @@ export default {
   }
  
  #taxi{
-   margin-bottom: 240px;
+   margin-bottom: 200px;
  }
   
 </style>

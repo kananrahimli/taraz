@@ -17,8 +17,8 @@
     <p class="mt-4">Bu hesablarinizla davam edin</p>
     <div class="d-flex " >
         
-        <a href="" class="mx-2"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="" class="mx-2"><i class="fab fa-google-plus fa-2x"></i></a>
+        <a href="" class="mx-2"><i class="fab fa-facebook fa-2x "></i></a>
+        <a href="" class="mx-2"><i class="fab fa-google   text-white p-2 " ></i></a>
     </div>
   </div>
 </template>
@@ -66,6 +66,11 @@ a{
 #login{
     padding: 20px 0px;
     
+}
+
+i.fa-google{
+  border-radius: 50%;
+  background: #2F2F30;
 }
 
 

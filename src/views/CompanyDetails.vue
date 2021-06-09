@@ -6,7 +6,7 @@
           :src="require('../assets/' + cargoCompany.logo + '.png')"
           alt=""
           class="img-fluid"
-          width="50"
+          width="120"
         />
       </div>
       <div>

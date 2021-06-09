@@ -2,7 +2,7 @@
   <div id="footer" >
       <div class="container d-flex justify-content-between">
           <ul class="list-unstyled d-flex ">
-              <li class="mr-4"><router-link to="/login">Taraz c2021</router-link></li>
+              <li class="mr-4"><router-link to="/login">Taraz <span class="far fa-copyright" aria-hidden="true"></span>{{year}}</router-link></li>
               <li><router-link to="/contact">Contact us</router-link></li>
               <li class="mx-4"><router-link to="/about">Aboust us</router-link></li>
               <li><router-link to="/privacy">Privacy policy</router-link></li>
@@ -19,7 +19,15 @@
 
 <script>
 export default {
-
+    data(){
+        return{
+            year:''
+        }
+    },
+    created(){
+        let currentYear= new Date().getFullYear()
+        this.year=currentYear
+    }
 }
 </script>
 

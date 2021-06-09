@@ -10,8 +10,12 @@
       </p>
     </div>
     <div class="d-flex w-100 justify-content-around mt-5 px-5">
-        <div class=""><strong><h2 class="font-weight-bold"><router-link to="/contact">Contact</router-link></h2></strong></div>
-        <div class="mr-5"><strong><h2 class="font-weight-bold"><router-link to="/privacy" >Privacy policy</router-link></h2></strong></div>
+        <div class=""><strong><h2 class="font-weight-bold"><router-link to="/contact">Contact</router-link></h2></strong>
+                <base-card><img src="../assets/about1.png" alt=""></base-card>
+        </div>
+        <div class="mr-5"><strong><h2 class="font-weight-bold"><router-link to="/privacy" >Privacy policy</router-link></h2></strong>
+           <base-card><img src="../assets/about2.png" alt=""></base-card>
+        </div>
     </div>
   </div>
 </template>
@@ -29,4 +33,6 @@ a{
     text-decoration: none;
     color: #2F2F30;
 }
+
+
 </style>

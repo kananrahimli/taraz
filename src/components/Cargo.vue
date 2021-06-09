@@ -1,13 +1,14 @@
 <template>
-  <div class="d-flex flex-column  " id="cargo">
-    <div class="d-flex container flex-wrap">
+  <div  id="cargo" >
+    <base-card class="d-flex flex-column  mb-5 "  >
+       <div class="d-flex container flex-wrap justify-content-around">
       <base-select>
         <option selected disabled hidden>Sifariş ediləcək ölkə</option>
         <option v-for="country in fromCountries" :key="country">{{
           country
         }}</option>
       </base-select>
-      <base-select>
+      <base-select >
         <option selected disabled hidden>Çatdırılacaq ölkə</option>
         <option v-for="country in toCountries" :key="country">{{
           country
@@ -15,7 +16,7 @@
       </base-select>
 
       <!-- Selecet for Kq or ton or qram -->
-      <div class="mx-4 selectKq">
+      <div class="selectKq ">
         <input
           type="text"
           placeholder="Çəki"
@@ -36,18 +37,19 @@
       <base-button name="Hesabla" @click="hesabla"></base-button>
     </div>
 
+
     <!-- Filter for type example maye or paket or xususi or tecili -->
-    <div class="d-flex container py-5 px-5">
-      <div class="mr-5">
+    <div class="d-flex container pt-5 pl-2  ">
+      <div class="mx-4">
         <input type="checkbox" id="maye" v-model="maye" @change="setMaye" />
         <label for="maye" class="isSlim">Maye tərkibli</label>
       </div>
 
-      <div>
+      <div class="mx-4">
         <input type="checkbox" id="paket" v-model="paket" @change="setPaket" />
         <label for="paket" class="isSlim">Paket birləşdirmə</label>
       </div>
-      <div class="mx-5">
+      <div class="mx-4">
         <input
           type="checkbox"
           id="xususi"
@@ -56,11 +58,11 @@
         />
         <label for="xususi" class="isSlim">Xüsusi daşıma</label>
       </div>
-      <div>
+      <div class="mx-4">
         <input type="checkbox" id="sekil" v-model="sekil" @change="setSekil" />
         <label for="sekil" class="isSlim">Məhsulun şəklini çəkmək</label>
       </div>
-      <div class="ml-5">
+      <div class="mx-4">
         <input
           type="checkbox"
           id="tecili"
@@ -72,6 +74,8 @@
     </div>
    <!-- Filter for type example maye or paket or xususi or tecili -->
 
+    </base-card>
+   
    <!-- Filter result in table -->
     <div class="base" v-if="clicked">
       <table class="table table-borderless">
@@ -215,7 +219,7 @@ export default {
 
     writeWeight() {
       this.$refs.select.style.width = "48px";
-      this.$refs.select.style.paddingLeft = "0px";
+      this.$refs.select.style.paddingLeft = "18px";
       this.deyer = this.inputVal;
       this.result = "";
     },
@@ -291,6 +295,7 @@ input[type="checkbox"]:checked::after {
   color: #969799;
   position: relative;
   cursor: pointer;
+  background: transparent;
 }
 
 input[type="text"] {
@@ -318,7 +323,7 @@ input[type="text"] {
 
 /* Style for filter result intable */
 img {
-  width: 10%;
+  width: 25%;
 }
 .bg-secondary {
   background: #f8f8f8 !important;
