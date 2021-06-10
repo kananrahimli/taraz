@@ -1,6 +1,6 @@
 <template>
-  <div class="nav py-4">
-    <div class="container d-flex flex-wrap justify-content-between">
+  <div class="nav py-4 px-4">
+    <div class="w-100 px-5 d-flex flex-wrap justify-content-between">
       <div class=""><a href="" v-if=" isShown"><img src="../assets/tarazlogo.png" alt="" width="100"></a></div>
       <div class="d-flex flex-wrap ">
         <div class="">
@@ -51,7 +51,7 @@ span {
 }
 .fa-bell,
 .fa-user {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 a {
@@ -62,13 +62,15 @@ a {
 
 .notification-count{
   background-color: #ffe758;
-  border-radius: 50%;
-  display: inline-block;
-  padding: 0px 2px;
   border: 1px solid #ffe758;
-  font-size: 10px;
+  border-radius: 50%;
+  text-align: center;
+  /* padding: 0px 4px; */
+  width: 12px;
+  height: 12px;
+  font-size: 8px;
   position: absolute;
-  left: 12px;
-  top: -10px;
+  left: 8px;
+  top: -3px;
 }
 </style>

@@ -22,12 +22,12 @@ export default createStore({
 
       taxies:[
         {id:1,logo:'189taxi',phone:'*189',moneyValue:'2 azn',star:'3.5'},
-        {id:2,logo:'bakutaxi',phone:'*9000',moneyValue:'2 azn',star:'3'},
-        {id:3,logo:'ekonom',phone:'*9111',moneyValue:'2 azn',star:'4'},
+        {id:2,logo:'bakutaxi',phone:'*9000',moneyValue:'2 azn',star:'3.0'},
+        {id:3,logo:'ekonom',phone:'*9111',moneyValue:'2 azn',star:'4.0'},
         {id:4,logo:'uber',phone:'?',moneyValue:'2 azn',star:'3.5'},
         {id:5,logo:'bakutaxi',phone:'*9000',moneyValue:'2 azn',star:'4.5'},
         {id:6,logo:'189taxi',phone:'*189',moneyValue:'2 azn',star:'3.5'},
-        {id:7,logo:'ekonom',phone:'*9111',moneyValue:'2 azn',star:'3'},
+        {id:7,logo:'ekonom',phone:'*9111',moneyValue:'2 azn',star:'3.0'},
       ]
     };
   },

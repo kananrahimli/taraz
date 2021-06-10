@@ -1,10 +1,10 @@
 <template>
   <div
     id="signup"
-    class="d-flex  justify-content-center align-items-center flex-column py-2 mb-3"
+    class="d-flex  justify-content-center align-items-center flex-column py-5 mb-4"
   >
     <div class="d-flex flex-column">
-      <h1 class="font-weight-bold mb-0">Hesab yarat</h1>
+      <h1 class=" mb-2">Hesab yarat</h1>
     </div>
 
     <div class="inputs d-flex flex-column mt-4">
@@ -17,6 +17,7 @@
         name="save"
         text="Şərtləri oxudum və qəbul edirəm"
         @accept="agree"
+        isWeight
       ></base-check-box>
       <base-button  
         @click="signUp"
@@ -26,10 +27,10 @@
         enter
       ></base-button>
     </div>
-    <p class="mt-4">Bu hesablarinizla davam edin</p>
+    <p class="mt-5">Bu hesablarinizla davam edin</p>
     <div class="d-flex ">
-      <a href="" class="mx-2"><i class="fab fa-facebook fa-2x"></i></a>
-      <a href="" class="mx-2"><i class="fab fa-google   text-white p-2 " ></i></a>
+      <a href="" class="mx-3"><i class="fab fa-facebook fa-3x"></i></a>
+      <a href="" class="mx-3"><i class="fab fa-google   text-white p-2 " ></i></a>
     </div>
   </div>
 </template>
@@ -64,7 +65,8 @@ export default {
 
 <style scoped>
 h1 {
-  font-size: 40px;
+  font-size: 60px;
+  font-weight: 600;
 }
 span {
   font-size: 15px;
@@ -84,5 +86,6 @@ a {
 i.fa-google{
   border-radius: 50%;
   background: #2F2F30;
+  font-size: 28px;
 }
 </style>

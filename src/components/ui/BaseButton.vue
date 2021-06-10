@@ -74,9 +74,10 @@ export default {
   background: #959597;
   color: #ffff;
   border: 1px solid;
-  padding: 12px 130px;
+  padding: 0px 180px;
   font-size: 12px;
   font-weight: 600;
+  height: 41px;
   text-align: center;
   text-decoration: none;
 }
@@ -94,7 +95,8 @@ export default {
   background: #2f2f30;
   color: #ffff;
   border: 1px solid;
-  padding: 12px 130px;
+  height: 41px;
+  padding: 0px 180px;
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;

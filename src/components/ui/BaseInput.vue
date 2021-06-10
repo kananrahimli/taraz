@@ -72,18 +72,18 @@ export default {
 <style scoped>
 
 .isLarge{
-    width: 300px;
+    width: 400px;
     border: transparent;
     border-bottom: 1.5px solid  #2F2F30;
     margin: 12px 0px;
     padding: 4px 8px;
 }
 .isNormal{
+    width: 280px;
     border: transparent;
     border-bottom: 1.5px solid  #969799;
     margin: 10px 0px!important;
-    padding-top: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 4px;
 }
 input:focus{
     border: transparent;
@@ -102,7 +102,7 @@ div{
 i{
     position: absolute;
     right: 0px;
-    bottom: 30px;
+    bottom: 20px;
     cursor: pointer;
       color: #969799;
       font-size: 12px;

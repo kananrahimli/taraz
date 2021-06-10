@@ -46,4 +46,10 @@ p{
     color: #2f2f30;
     font-weight: 600;
 }
+
+li{
+    box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    padding: 24px 12px;
+    padding-bottom: 12px;
+}
 </style>

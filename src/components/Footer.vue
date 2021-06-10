@@ -9,9 +9,9 @@
           </ul>
 
           <div class="icons">
-              <a href=""><i class="fab fa-facebook-f"></i></a>
-              <a href="" class="mx-5"><i class="fab fa-instagram"></i></a>
-              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href="" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+              <a href="" class="mx-4"><i class="fab fa-instagram"></i></a>
+              <a href="" class="mx-2"><i class="fab fa-twitter"></i></a>
           </div>
       </div>
   </div>

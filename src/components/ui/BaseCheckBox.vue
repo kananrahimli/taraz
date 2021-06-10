@@ -52,7 +52,7 @@ export default {
 }
 .isSlim {
   color: #2f2f30;
-  font-size: 12px;
+  font-size: 15px;
   text-indent: 8px;
   cursor: pointer;
 }

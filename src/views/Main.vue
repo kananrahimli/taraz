@@ -1,5 +1,5 @@
 <template>
-  <div id="main" class="d-flex flex-column align-items-center container">
+  <div id="main" class="d-flex flex-column align-items-center ">
     <div class="logo mt-4 mb-3" v-if="!isShown">
       <img src="../assets/tarazlogo.png" alt="" width="100">
     </div>
@@ -17,7 +17,7 @@
         <router-link to="/main/hotel" @click="change">Otel</router-link>
       </li>
     </ul>
-    <div class="py-5 container">
+    <div class="py-5 w-100">
       <router-view></router-view>
     </div>
   </div>
@@ -59,6 +59,10 @@ export default {
 </script>
 
 <style scoped>
+#main{
+  padding-right: 80px;
+   padding-left: 80px;
+}
 a {
   text-decoration: none;
   position: relative;
@@ -67,7 +71,7 @@ a::after {
   content: "";
   position: absolute;
   left: 0;
-  top: 25px;
+  top: 34px;
   width: 0%;
   height: 3px;
   background-color: #ffe758;
@@ -78,7 +82,7 @@ a:hover:after {
   content: "";
   position: absolute;
   left: 0;
-  top: 25px;
+  top: 34px;
   width: 200%;
   height: 3px;
   background-color: #ffe758;
@@ -96,7 +100,7 @@ ul::after {
   content: "";
   position: absolute;
   left: 0;
-  top: 30px;
+  top: 35px;
   width: 100%;
   height: 1px;
   background-color: #969799;

@@ -1,6 +1,6 @@
 <template>
 <div class="position-relative">
-   <select name="" id=""   @click="change" @change="select">
+   <select name="" id=""   @click="change" @change="select" :class="{short:short,large:!short}">
     <slot></slot>
   </select>
   <i class="fas fa-caret-down" ref="direction"></i>
@@ -12,7 +12,17 @@
 
 <script>
 export default {
-   props:['value'],
+   props:{
+     value:{
+       type:String,
+       required:false
+     },
+      short:{
+       type:Boolean,
+       required:false,
+       default:false
+     }
+   },
    data(){
      return{
        up:false
@@ -35,12 +45,24 @@ export default {
 </script>
 
 <style scoped>
-select {
-  /* padding-right: 100px; */
-  width: 220px;
+.short{
+   width: 200px;
   border: none;
   padding-top: 8px;
-  padding-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid;
+  outline: none;
+  appearance: none;
+  color: #969799;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+} 
+.large{
+   width: 280px;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 4px;
   border-bottom: 1px solid;
   outline: none;
   appearance: none;
