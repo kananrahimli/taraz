@@ -1,6 +1,6 @@
 <template>
-  <div id="footer" >
-      <div class="container d-flex justify-content-between">
+  <div class="mx-4" id="footer">
+      <div class=" d-flex justify-content-between px-5">
           <ul class="list-unstyled d-flex ">
               <li class="mr-4"><router-link to="/login">Taraz <span class="far fa-copyright" aria-hidden="true"></span>{{year}}</router-link></li>
               <li><router-link to="/contact">Contact us</router-link></li>
@@ -43,9 +43,12 @@ i{
     color: #2F2F30;
 }
 
+
+
 /* #footer{
     position: fixed;
     width: 100%;
     bottom: 0px;
+    padding: 0px 40px !important;
 } */
 </style>

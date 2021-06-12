@@ -45,23 +45,23 @@ export default {
 <style scoped>
 .isWeight {
   color: #969799;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
   text-indent: 8px;
   cursor: pointer;
 }
-.isSlim {
+/* .isSlim {
   color: #2f2f30;
-  font-size: 15px;
+  font-size: 16px;
   text-indent: 8px;
   cursor: pointer;
-}
+} */
 input[type="checkbox"] {
   appearance: none;
   height: 12px;
   width: 12px;
   background: none;
   border: 1px solid;
+  margin-bottom: 2px;
   vertical-align:middle;
   position: relative;
   cursor: pointer;

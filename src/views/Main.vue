@@ -17,7 +17,7 @@
         <router-link to="/main/hotel" @click="change">Otel</router-link>
       </li>
     </ul>
-    <div class="py-5 w-100">
+    <div class="py-4 w-100">
       <router-view></router-view>
     </div>
   </div>
@@ -107,7 +107,7 @@ ul::after {
 }
 ul li a {
   color: #6c6d6d;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 </style>

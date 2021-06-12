@@ -17,7 +17,7 @@
         name="save"
         text="Şərtləri oxudum və qəbul edirəm"
         @accept="agree"
-        isWeight
+        
       ></base-check-box>
       <base-button  
         @click="signUp"

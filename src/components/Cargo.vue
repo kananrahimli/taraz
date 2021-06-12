@@ -279,6 +279,7 @@ input[type="checkbox"] {
   height: 12px;
   width: 12px;
   background: none;
+  margin-top: 2px;
   border: 1px solid;
   vertical-align: middle;
   position: relative;

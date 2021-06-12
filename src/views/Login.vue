@@ -2,7 +2,7 @@
   <div id="login" class="d-flex  justify-content-center align-items-center flex-column mb-4 ">
     <div class="d-flex flex-column">
       <h1 class="font-weight-bold mb-0" >Hesaba daxil ol</h1>
-      <span class="mx-auto font-weight-bolder">VƏ YA<router-link to="/signup" class="text-decoration-none ml-1">QEYDİYYATDAN KEÇ</router-link></span>
+      <span class="mx-auto font-weight-bolder enter">VƏ YA<router-link to="/signup" class="text-decoration-none ml-1">QEYDİYYATDAN KEÇ</router-link></span>
     </div>
 
     <div class="inputs d-flex flex-column mt-4">
@@ -11,13 +11,13 @@
         <base-button class="mt-4 mb-1 login" name="Daxil ol" @click="login" enter   ></base-button>
     </div>
     <div class="d-flex ">
-        <base-check-box  class="mr-5 pr-4" name="save" text="Yadda saxla"></base-check-box>
+        <base-check-box  class="mr-5 pr-4" name="save" text="Yadda saxla" ></base-check-box>
         <div class="ml-5 pl-3" ><a href="#">Şifrəni unutmusunuz?</a> </div>
     </div>
-    <p class="mt-4">Bu hesablarinizla davam edin</p>
+    <p class="mt-4">Bu hesablarınızla davam edin</p>
     <div class="d-flex " >
-        <a href="" class="mx-3"><i class="fab fa-facebook  fa-3x"></i></a>
-        <a href="" class="mx-3"><i class="fab fa-google fa-2x  text-white p-2 " ></i></a>
+        <a href="" class="mx-3"><i class="fab fa-facebook  "></i></a>
+        <a href="" class="mx-3"><i class="fab fa-google   text-white p-2 " ></i></a>
     </div>
   </div>
 </template>
@@ -47,15 +47,16 @@ h1{
     font-size: 60px;
 }
 span {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 span a{
     color: #FFE758;
+     font-size: 12px;
 }
 
 a{
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
     text-decoration: none;
     color: #2F2F30;
@@ -70,7 +71,13 @@ a{
 i.fa-google{
   border-radius: 50%;
   background: #2F2F30;
-  font-size: 28px;
+  font-size: 30px;
+}
+i.fa-facebook{
+  font-size: 48px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #2F2F30;
 }
 
 
