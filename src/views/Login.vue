@@ -12,7 +12,7 @@
     </div>
     <div class="d-flex ">
         <base-check-box  class="mr-5 pr-4" name="save" text="Yadda saxla" ></base-check-box>
-        <div class="ml-5 pl-3" ><a href="#">Şifrəni unutmusunuz?</a> </div>
+        <div class="ml-5 pl-4" ><a href="#">Şifrəni unutmusunuz?</a> </div>
     </div>
     <p class="mt-4">Bu hesablarınızla davam edin</p>
     <div class="d-flex " >
