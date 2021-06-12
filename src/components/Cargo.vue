@@ -264,7 +264,7 @@ export default {
   color: #ffe758;
 }
 #cargo {
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 /* Style for Check box and Label */
