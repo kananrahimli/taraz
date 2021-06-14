@@ -1,7 +1,7 @@
 <template>
   <div id="main" class="d-flex flex-column align-items-center ">
     <div class="logo mt-4 mb-3" v-if="!isShown">
-      <img src="../assets/tarazlogo.png" alt="" width="100">
+      <img src="../assets/svg/tarazlogo.svg" alt="" width="100">
     </div>
     <ul class="list-unstyled d-flex mt-3  w-100">
       <li class="mr-5">

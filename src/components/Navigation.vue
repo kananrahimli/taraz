@@ -1,7 +1,7 @@
 <template>
   <div class="nav py-4 px-4">
     <div class="w-100 px-5 d-flex flex-wrap justify-content-between">
-      <div class=""><a href="" v-if=" isShown"><img src="../assets/tarazlogo.png" alt="" width="100"></a></div>
+      <div class=""><a href="" v-if=" isShown"><img src="../assets/svg/tarazlogo.svg" alt="" width="100"></a></div>
       <div class="d-flex flex-wrap ">
         <div class="">
           <div><p>Bakı: 0{{day}}/0{{month}}/{{year}}</p></div>
