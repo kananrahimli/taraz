@@ -43,12 +43,12 @@
 
       <!-- Filter for type example maye or paket or xususi or tecili -->
       <div class="d-flex container pt-4 ">
-        <div class="mr-5">
+        <div class="mr-4 ml-1">
           <input type="checkbox" id="maye" v-model="maye" @change="setMaye" />
           <label for="maye" class="isSlim">Maye tərkibli</label>
         </div>
 
-        <div class="mr-5 ml-4">
+        <div class="mx-4">
           <input
             type="checkbox"
             id="paket"
@@ -57,7 +57,7 @@
           />
           <label for="paket" class="isSlim">Paket birləşdirmə</label>
         </div>
-        <div class="mr-5 ml-4">
+        <div class="mx-4">
           <input
             type="checkbox"
             id="xususi"
@@ -66,7 +66,7 @@
           />
           <label for="xususi" class="isSlim">Xüsusi daşıma</label>
         </div>
-        <div class="mr-5 ml-4">
+        <div class="mx-4">
           <input
             type="checkbox"
             id="sekil"
@@ -75,7 +75,7 @@
           />
           <label for="sekil" class="isSlim">Məhsulun şəklini çəkmək</label>
         </div>
-        <div class="mr-5 ml-4">
+        <div class="mx-4">
           <input
             type="checkbox"
             id="tecili"
@@ -270,7 +270,7 @@ export default {
 /* Style for Check box and Label */
 .isSlim {
   color: #2f2f30;
-  font-size: 12px;
+  font-size: 14px;
   text-indent: 8px;
   cursor: pointer;
 }
@@ -279,7 +279,6 @@ input[type="checkbox"] {
   height: 12px;
   width: 12px;
   background: none;
-  margin-top: 2px;
   border: 1px solid;
   vertical-align: middle;
   position: relative;
