@@ -49,7 +49,9 @@ export default {
 span {
   cursor: pointer;
 }
-.fa-bell,
+.fa-bell{
+  font-size: 22px;
+}
 .fa-user {
   font-size: 20px;
 }
@@ -63,12 +65,13 @@ a {
 .notification-count{
   background-color: #ffe758;
   border: 1px solid #ffe758;
+  display: inline-block;
   border-radius: 50%;
   text-align: center;
   /* padding: 0px 4px; */
   width: 12px;
   height: 12px;
-  font-size: 8px;
+  font-size: 7px;
   position: absolute;
   left: 8px;
   top: -3px;

@@ -88,6 +88,7 @@ export default {
   padding: 12px 80px;
   font-size: 12px;
   font-weight: 600;
+  text-transform: uppercase;
   text-decoration: none;
   text-align: center;
 }
